@@ -8,7 +8,7 @@ const HttpService = async (queryParam, method, request,type) => {
     if(type=='demo'){
         BASEURL=  `https://dummyjson.com/products/category/${queryParam}`;
     } else{
-        BASEURL=  `http://localhost:3001/${queryParam}`;
+        BASEURL=  `https://s-martapp-backend.herokuapp.com/${queryParam}`;
         
     }
     

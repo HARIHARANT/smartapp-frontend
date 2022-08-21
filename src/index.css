@@ -1,0 +1,25 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+    background-color: #fcfcfc;    
+}
+.logo{
+	height: 60px;
+	width:auto;
+}
+.slide{
+	width:100%;
+}
+.text-danger{
+	justify-content: center;
+    display: flex;
+    color: red;
+	text-align: center;
+}
+
+

@@ -14,16 +14,15 @@ const HttpService = async (queryParam, method, request,type) => {
     
     console.log(`url:${BASEURL}`);  
     
-    try {
-       //axios.defaults.headers.common['Content-type'] = 'application/json';
-      
-    //    request.headers = {
-    //       'Authorization': "Bearer "+localStorage.getItem("_token")
-    //     };
-        axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("_token")}`;
+    try {             
+        let config = {
+            headers: {
+              'Authorization': 'Bearer ' + localStorage.getItem("_token")
+            }
+          }
 
        if(method == "POST"){
-        response = await axios.post(BASEURL, request);
+        response = await axios.post(BASEURL, request, config);
        }else if(method == "GET"){
         response = await axios.get(BASEURL, request);
        }else if(method == "PUT"){
